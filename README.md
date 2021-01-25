@@ -21,16 +21,16 @@
 
 ## Inputs
 
-| Name                 | Description                                                                                                                | Type          | Default                                   | Required |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------- | ----------------------------------------- | :------: |
-| description          | (Optional) The description of the Permission Set.                                                                          | `string`      | `""`                                      |    no    |
-| group\_display\_name | The group's display name value                                                                                             | `string`      | n/a                                       |   yes    |
-| managed\_policy\_arn | describe your variable                                                                                                     | `string`      | n/a                                       |   yes    |
-| name                 | (Required, Forces new resource) The name of the Permission Set.                                                            | `string`      | n/a                                       |   yes    |
-| relay\_state         | (Optional) The relay state URL used to redirect users within the application during the federation authentication process. | `string`      | `null`                                    |    no    |
-| session\_duration    | (Optional) The length of time that the application user sessions are valid in the ISO-8601 standard. Default: PT1H.        | `string`      | `"PT1H"`                                  |    no    |
-| tags                 | (Optional) Key-value map of resource tags.                                                                                 | `map(string)` | <pre>{<br>  "Terraform": "Yes"<br>}</pre> |    no    |
-| target\_id           | (Required, Forces new resource) An AWS account identifier, typically a 10-12 digit string.                                 | `string`      | n/a                                       |   yes    |
+| Name                  | Description                                                                                                                | Type           | Default                                   | Required |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------- | ----------------------------------------- | :------: |
+| account\_ids          | (Required, Forces new resource) An AWS account identifier, typically a 10-12 digit string.                                 | `list(string)` | n/a                                       |   yes    |
+| description           | (Optional) The description of the Permission Set.                                                                          | `string`       | `""`                                      |    no    |
+| group\_display\_name  | The group's display name value                                                                                             | `string`       | n/a                                       |   yes    |
+| managed\_policy\_arns | Managed polices ARNs                                                                                                       | `list(string)` | n/a                                       |   yes    |
+| name                  | (Required, Forces new resource) The name of the Permission Set.                                                            | `string`       | n/a                                       |   yes    |
+| relay\_state          | (Optional) The relay state URL used to redirect users within the application during the federation authentication process. | `string`       | `null`                                    |    no    |
+| session\_duration     | (Optional) The length of time that the application user sessions are valid in the ISO-8601 standard. Default: PT1H.        | `string`       | `"PT1H"`                                  |    no    |
+| tags                  | (Optional) Key-value map of resource tags.                                                                                 | `map(string)`  | <pre>{<br>  "Terraform": "Yes"<br>}</pre> |    no    |
 
 ## Outputs
 
