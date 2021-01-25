@@ -31,14 +31,14 @@ variable "session_duration" {
   description = "(Optional) The length of time that the application user sessions are valid in the ISO-8601 standard. Default: PT1H."
 }
 
-variable "target_id" {
-  type        = string
+variable "account_ids" {
+  type        = list(string)
   description = "(Required, Forces new resource) An AWS account identifier, typically a 10-12 digit string."
 }
 
-variable "managed_policy_arn" {
-  type        = string
-  description = "describe your variable"
+variable "managed_policy_arns" {
+  type        = list(string)
+  description = "Managed polices ARNs"
 }
 
 # future use
